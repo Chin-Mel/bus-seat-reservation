@@ -1,3 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element db_object_id="3bbcd5898360e610441bcd65eeaad3ac" label="Seat Reservation" max_length="40" name="x_1620132_bus_seat_seat_reservation" type="collection"/>
+    <element db_object_id="3bbcd5898360e610441bcd65eeaad3ac" label="Seat Reservation" max_length="40" name="x_1620132_bus_seat_seat_reservation" type="collection">
+        <element label="Destination" mandatory="true" max_length="32" name="destination" reference="x_1620132_bus_seat_bus_stop" type="reference"/>
+        <element label="Origin" mandatory="true" max_length="32" name="origin" reference="x_1620132_bus_seat_bus_stop" type="reference"/>
+        <element label="Bus" mandatory="true" max_length="32" name="bus" reference="x_1620132_bus_seat_bus_unit" type="reference"/>
+        <element choice="3" label="Status" mandatory="true" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Rejected" sequence="3" value="Rejected"/>
+                <element inactive_on_update="false" label="Approved" sequence="2" value="Approved"/>
+                <element inactive_on_update="false" label="Awaiting Approval" sequence="1" value="Awaiting Approval"/>
+                <element inactive_on_update="false" label="Completed" sequence="4" value="Completed"/>
+                <element inactive_on_update="false" label="Canceled" sequence="5" value="Canceled"/>
+            </choice>
+        </element>
+        <element label="Seat Number" mandatory="true" max_length="40" name="seat_number" type="integer"/>
+        <element label="Cost" mandatory="true" max_length="20" name="cost" type="currency"/>
+        <element label="Applicant" mandatory="true" max_length="32" name="applicant" reference="x_1620132_bus_seat_user" type="reference"/>
+        <index name="index">
+            <element name="applicant"/>
+        </index>
+        <index name="index2">
+            <element name="bus"/>
+        </index>
+        <index name="index3">
+            <element name="destination"/>
+        </index>
+        <index name="index4">
+            <element name="origin"/>
+        </index>
+    </element>
 </database>

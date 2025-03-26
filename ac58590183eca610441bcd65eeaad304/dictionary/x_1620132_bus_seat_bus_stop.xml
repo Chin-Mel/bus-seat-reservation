@@ -1,3 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element db_object_id="df7c9d098360e610441bcd65eeaad334" label="Bus Stop" max_length="40" name="x_1620132_bus_seat_bus_stop" type="collection"/>
+    <element db_object_id="df7c9d098360e610441bcd65eeaad334" label="Bus Stop" max_length="40" name="x_1620132_bus_seat_bus_stop" type="collection">
+        <element label="Name" mandatory="true" max_length="500" name="name" type="string"/>
+        <element choice="3" default="Choose Type" label="Type" mandatory="true" max_length="40" name="type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Terminal" sequence="1" value="Terminal"/>
+                <element inactive_on_update="false" label="Non-terminal" sequence="2" value="Non-terminal"/>
+            </choice>
+        </element>
+    </element>
 </database>

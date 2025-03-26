@@ -1,3 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element db_object_id="0fac150d8360e610441bcd65eeaad3f1" label="Bus Unit" max_length="40" name="x_1620132_bus_seat_bus_unit" type="collection"/>
+    <element db_object_id="0fac150d8360e610441bcd65eeaad3f1" label="Bus Unit" max_length="40" name="x_1620132_bus_seat_bus_unit" type="collection">
+        <element label="Bus Number" mandatory="true" max_length="1000" name="bus_number" type="string"/>
+        <element label="Bus Stops" mandatory="true" max_length="32" name="bus_stops" reference="x_1620132_bus_seat_bus_stop" type="reference"/>
+        <element choice="3" label="Status" mandatory="true" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Active" sequence="1" value="Active"/>
+                <element inactive_on_update="false" label="In-active" sequence="2" value="In-active"/>
+            </choice>
+        </element>
+        <element label="Company" mandatory="true" max_length="32" name="company" reference="x_1620132_bus_seat_bus_company" type="reference"/>
+        <element label="Departure Schedule" mandatory="true" max_length="40" name="departure_schedule" type="glide_date_time"/>
+        <element choice="3" default="Choose Accessibility" label="Accessibility" mandatory="true" max_length="40" name="accessibility" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Non-aircon" sequence="2" value="Non-aircon"/>
+                <element inactive_on_update="false" label="Aircon" sequence="1" value="Aircon"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="bus_stops"/>
+        </index>
+        <index name="index2">
+            <element name="company"/>
+        </index>
+    </element>
 </database>

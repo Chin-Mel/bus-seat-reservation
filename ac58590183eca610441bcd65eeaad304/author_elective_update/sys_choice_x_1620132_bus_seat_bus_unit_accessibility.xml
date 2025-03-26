@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="accessibility" table="x_1620132_bus_seat_bus_unit" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>accessibility</element>
+            <name>x_1620132_bus_seat_bus_unit</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-03-26 03:18:07</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>accessibility</sys_name>
+            <sys_package display_value="Bus Seat Reservation System" source="x_1620132_bus_seat">ac58590183eca610441bcd65eeaad304</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Bus Seat Reservation System">ac58590183eca610441bcd65eeaad304</sys_scope>
+            <sys_update_name>sys_choice_x_1620132_bus_seat_bus_unit_accessibility</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-03-26 03:18:07</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>accessibility</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Aircon</label>
+            <language>en</language>
+            <name>x_1620132_bus_seat_bus_unit</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-03-26 03:18:07</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-03-26 03:18:07</sys_updated_on>
+            <value>Aircon</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>accessibility</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Non-aircon</label>
+            <language>en</language>
+            <name>x_1620132_bus_seat_bus_unit</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-03-26 03:18:27</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-03-26 03:18:34</sys_updated_on>
+            <value>Non-aircon</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

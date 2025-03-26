@@ -1,3 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element db_object_id="8bdc150d8360e610441bcd65eeaad308" label="User" max_length="40" name="x_1620132_bus_seat_user" type="collection"/>
+    <element db_object_id="8bdc150d8360e610441bcd65eeaad308" label="User" max_length="40" name="x_1620132_bus_seat_user" type="collection">
+        <element label="Email" mandatory="true" max_length="500" name="email" type="string"/>
+        <element label="Name" mandatory="true" max_length="500" name="name" type="string"/>
+        <element choice="3" label="Role" mandatory="true" max_length="40" name="role" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Admin" sequence="4"/>
+                <element inactive_on_update="false" label="Patron" sequence="1"/>
+                <element inactive_on_update="false" label="Guest" sequence="2"/>
+                <element inactive_on_update="false" label="Operator" sequence="3"/>
+            </choice>
+        </element>
+    </element>
 </database>
