@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="6d5911098360e610441bcd65eeaad3db" label="Bus Company" max_length="40" name="x_1620132_bus_seat_bus_company" type="collection">
+        <element label="Name" mandatory="true" max_length="40" name="name" type="string"/>
+        <element choice="1" default="Choose Status" label="Status" mandatory="true" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Inactive" sequence="2" value="Inactive"/>
+                <element inactive_on_update="false" label="Active" sequence="1" value="Active"/>
+            </choice>
+        </element>
+        <element label="Contact Number" mandatory="true" max_length="40" name="contact_number" type="string"/>
+        <element label="Contact Person" mandatory="true" max_length="40" name="contact_person" type="string"/>
+        <element label="Email" mandatory="true" max_length="40" name="email" type="string"/>
+        <element label="Address" mandatory="true" max_length="40" name="address" type="string"/>
+    </element>
+</database>
